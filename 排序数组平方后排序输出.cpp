@@ -4,12 +4,12 @@ void convert(int *a, int n){
 	int i = -1, j = 0, top = 0, *stack = (int *)calloc(n, sizeof(int));
 
 	while (a[++i] < 0 && i < n){
-		stack[++top] = a[i] * a[i]; //Õ»¸³Öµ£¬½«Îª¸ºÊýµÄa[i]ÒÀ´ÎÆ½·½ºóÑ¹ÈëÕ»Çø
+		stack[++top] = a[i] * a[i]; //æ ˆèµ‹å€¼ï¼Œå°†ä¸ºè´Ÿæ•°çš„a[i]ä¾æ¬¡å¹³æ–¹åŽåŽ‹å…¥æ ˆåŒº
 		
 	}
 
 	while ((i!=n)&&(top!=0)){
-		if ((a[i] * a[i]) < stack[top])    {              //´ËÊ±a[i]Îª·Ç¸ºÊý
+		if ((a[i] * a[i]) < stack[top])    {              //æ­¤æ—¶a[i]ä¸ºéžè´Ÿæ•°
 			a[j++] = a[i] * a[i], i++;
 			
 		}
